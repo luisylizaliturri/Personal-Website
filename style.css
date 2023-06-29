@@ -48,7 +48,7 @@ a {
   font-size: 20px;
   padding: 0px 50px 0px 50px;
   position: relative;
-  height: 15vh;
+  height: 15%;
 }
 
 .button:hover {
@@ -68,32 +68,31 @@ a {
 
 #title {
   background-color: rgb(0, 0, 0);
-  height: 80vh;
+  height: 85vh;
   position: relative;
 }
 
 .homepage-container {
   display: flex;
-  height: 65vh;
-  position: absolute;
+  height: 85%;
+  position: relative;
   justify-content: center;
   width: 100%;
-  gap: 100px;
+  gap: 5vw;
 }
 
 .hello-container {
-  flex-basis: 735px;
+  flex-basis: 45vw;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 50px;
   display: flex;
-  justify-content: center;
-  align-items: flex-end;
+  align-items: end;
   height: 90%;
+  width: 100%;
 }
 
 .my-name {
   font-size: 100px;
-  /* color: #0052ff; */
   color: #1da1f2;
 }
 
@@ -101,26 +100,27 @@ a {
   font-size: 30px;
   color: #a1a1a1;
   position: relative;
-  top: 20px;
-  left: 8px;
+  padding: 10px;
 }
 
 .avatar {
+  height: 100%;
   display: flex;
   justify-content: center;
   align-items: flex-end;
   width: 720px;
+  position: relative;
 }
 
 .avatar > img {
-  height: 55%;
+  height: 500px;
   position: fixed;
 }
 
 #projects {
   z-index: 2;
   background-color: rgb(0, 0, 0);
-  height: 80vh;
+  height: 85vh;
   width: auto;
   position: relative;
 }
@@ -138,42 +138,45 @@ hr {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
   position: relative;
-  height: 200px;
+  height: 120px;
 }
 .tab > a {
   display: flex;
   flex-direction: column;
-  font-size: 50px;
+  font-size: 3rem;
   font-weight: 600;
   position: absolute;
+  margin-top: 10px;
 }
 
-.tab > a:hover {
+.tab :hover {
   color: rgb(175, 175, 175);
   transition: 0.2s;
 }
 
 #projects-container {
-  display: grid;
-  grid-template-rows: 500px;
-  grid-template-columns: 500px 500px 500px;
+  display: flex;
+  flex-wrap: wrap;
   position: relative;
   justify-content: center;
-  margin-top: 40px;
 }
 
 .project {
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 20px;
 }
 
 .project-img {
-  height: 80%;
-  width: 80%;
-  border-radius: 50px;
+  height: 400px;
+  width: 400px;
+}
+.project-img > img {
+  height: 100%;
+  width: 100%;
+  border-radius: 15%;
 }
 
 .project > p {
@@ -188,12 +191,15 @@ hr {
   justify-content: center;
   align-items: center;
   font-size: 90px;
+  border-radius: 15%;
+  height: 100%;
+  width: 100%;
 }
 
 #contact {
   z-index: 2;
   background-color: rgb(0, 0, 0);
-  height: 80vh;
+  height: 100vh;
   width: auto;
   position: relative;
 }
@@ -202,16 +208,12 @@ hr {
   margin-top: 5px;
 }
 
-.contacts-tab {
-  display: flex;
-  justify-content: center;
-  margin: 30px 100px;
-}
-
 .contact-container {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
+  height: 85vh;
   gap: 25px;
 }
 
@@ -220,6 +222,56 @@ hr {
 }
 
 .contact-container > .big {
-  font-size: 200px;
+  font-size: 10vw;
   color: white;
+}
+
+@media (min-width:0px) and (max-width: 915px) {
+
+  .homepage-container {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .hello-container {
+    flex-direction: column;
+    font-size: 30px;
+    margin-top: 20px 30px 0px 30px;
+    text-align: center;
+    margin-top: 50px;
+    align-items: center;
+  }
+  .my-name {
+    font-size: 60px;
+  }
+
+  .hello-message > p {
+    font-size: 20px;
+    width: 400px;
+  }
+  .avatar > img {
+    height: 350px;
+  }
+
+  #projects {
+    height: auto;
+  }
+
+  .project-img {
+    height: 300px;
+    width: 300px;
+  }
+
+  .tab > a{
+    font-size: 30px;
+  }
+
+  .down-arrow{
+    height: 40px;
+  }
+
+  .icon{
+    height: 40px;
+  }
 }

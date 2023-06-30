@@ -1,6 +1,6 @@
 html {
   scroll-behavior: smooth;
-  overflow: hidden;
+  overflow: hidden !important;
   height: 100%;
   width: 100%;
 }
@@ -10,7 +10,7 @@ body {
   margin: 0;
   color: white;
   background-color: black;
-  overflow-y: auto ;
+  overflow-x: hidden !important;
   height: 100%;
   width: 100%;
   position: relative;
@@ -287,9 +287,6 @@ hr {
     height: 40px;
   }
 
-  .contact-container{
-
-  }
   .icon {
     height: 40px;
   }

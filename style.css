@@ -237,7 +237,6 @@ hr {
 }
 
 @media (min-width:0px) and (max-width: 915px) {
-
   .homepage-container {
     flex-direction: column;
     align-items: center;

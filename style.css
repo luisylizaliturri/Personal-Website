@@ -209,6 +209,8 @@ hr {
   height: 100%;
   width: 100%;
   position: relative;
+  overflow-y: hidden;
+
 }
 
 .email.button {

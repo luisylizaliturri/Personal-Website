@@ -294,8 +294,7 @@ hr {
 }
 
 @media (max-width: 445px) {
-    .avatar > img {
-        height: 250px;
-      }
-
+  .avatar > img {
+    height: 250px;
+  }
 }

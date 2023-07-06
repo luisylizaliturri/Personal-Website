@@ -23,8 +23,16 @@ color: white !important;
 }
 
 .light-mode{
-  background-color: white !important ;
+  background-color: rgb(220, 234, 255) !important ;
   color: black !important;
+}
+
+.avatar.dark-mode>img {
+  filter: drop-shadow(20px 20px 90px  #636363c9);
+}
+
+.avatar.light-mode>img {
+  filter: drop-shadow(20px 20px 90px  #00a6ff53);
 }
 
 p {
@@ -235,8 +243,8 @@ hr {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 100vh;
   gap: 25px;
+  height: 80%;
 }
 
  

@@ -17,14 +17,14 @@ body {
   position: relative;
 }
 
-.dark-mode{
+.dark-mode {
 background-color: black !important;
 color: white !important;
 }
 
 .light-mode{
-  background-color: white !important;
-color: black !important;
+  background-color: white !important ;
+  color: black !important;
 }
 
 p {
@@ -152,14 +152,14 @@ hr {
   box-shadow: inset 0 12px 12px -12px rgba(100, 100, 100, 0.5);
 }
 
-.tab {
+.tab-container {
   display: flex;
   flex-direction: column;
   align-items: center;
   position: relative;
   height: 120px;
 }
-.tab > a {
+.tab {
   display: flex;
   flex-direction: column;
   font-size: 2.5rem;
@@ -168,8 +168,8 @@ hr {
   margin-top: 10px;
 }
 
-.tab :hover {
-  color: rgb(127, 127, 127);
+.tab:hover {
+  color: rgb(104, 104, 104) !important;
   transition: 0.2s;
 }
 

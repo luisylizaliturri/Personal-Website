@@ -1,4 +1,3 @@
-
 // var viewButton = document.getElementById("view-button");
 // var toggleElements = document.querySelectorAll(".dark-mode"||".light-mode");
 // viewButton.addEventListener("click", function() {
@@ -18,17 +17,17 @@ var currentMode = localStorage.getItem("mode");
 if (currentMode === "dark") {
   document.body.classList.add("dark-mode");
   document.body.classList.remove("light-mode");
-}else{
-    document.body.classList.add("light-mode");
+} else {
+  document.body.classList.add("light-mode");
   document.body.classList.remove("dark-mode");
 }
 
 // Toggle mode and store preference on button click
-viewButton.addEventListener("click", function() {
-    toggleElements.forEach(function(element){
-        element.classList.toggle("dark-mode");
-        element.classList.toggle("light-mode");
-    });
+viewButton.addEventListener("click", function () {
+  toggleElements.forEach(function (element) {
+    element.classList.toggle("dark-mode");
+    element.classList.toggle("light-mode");
+  });
 
   // Update localStorage with the current mode
   if (toggleElements[0].contains("dark-mode")) {

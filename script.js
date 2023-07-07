@@ -1,28 +1,17 @@
-// var viewButton = document.getElementById("view-button");
-// var toggleElements = document.querySelectorAll(".dark-mode"||".light-mode");
-// viewButton.addEventListener("click", function() {
-//     toggleElements.forEach(function(element){
-//         element.classList.toggle("dark-mode");
-//         element.classList.toggle("light-mode");
-//     });
-// });
-
 var viewButton = document.getElementById("view-button");
 var toggleElements = document.querySelectorAll(".dark-mode, .light-mode");
 
-// Get the current mode from localStorage (if available)
+// Get the current mode from localStorage
 var currentMode = localStorage.getItem("mode");
 
-// Set the initial mode based on the stored preference
+// Set the theme based on the stored data
 if (currentMode === "dark") {
-  document.body.classList.add("dark-mode");
-  document.body.classList.remove("light-mode");
+  toggleTheme(toggleElements, "dark");
 } else {
-  document.body.classList.add("light-mode");
-  document.body.classList.remove("dark-mode");
+  toggleTheme(toggleElements, "light");
 }
 
-// Toggle mode and store preference on button click
+// Toggle theme and store preference on button click
 viewButton.addEventListener("click", function () {
   toggleElements.forEach(function (element) {
     element.classList.toggle("dark-mode");
@@ -30,9 +19,30 @@ viewButton.addEventListener("click", function () {
   });
 
   // Update localStorage with the current mode
-  if (toggleElements[0].contains("dark-mode")) {
+  if (toggleElements[0].classList.contains("dark-mode")) {
     localStorage.setItem("mode", "dark");
   } else {
     localStorage.setItem("mode", "light");
   }
 });
+
+
+/**
+ * Changes mode to input mode (either "dark" or "light")
+ * 
+ * @param {*} elements - list of elements to update
+ * @param {*} theme  - wanted mode
+ */
+function toggleTheme(elements, theme) {
+  if (theme === "dark") {
+    elements.forEach(function (element) {
+      element.classList.add("dark-mode");
+      element.classList.remove("light-mode");
+    });
+  } else if (theme === "light") {
+    elements.forEach(function (element) {
+        element.classList.remove("dark-mode");
+        element.classList.add("light-mode");
+    });
+  }
+}

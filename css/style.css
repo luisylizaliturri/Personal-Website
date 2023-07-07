@@ -28,7 +28,7 @@ color: white !important;
 }
 
 .avatar.dark-mode>img {
-  filter: drop-shadow(20px 20px 90px  #636363c9);
+  filter: drop-shadow(20px 20px 90px  #46464695);
 }
 
 .avatar.light-mode>img {

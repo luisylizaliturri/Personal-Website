@@ -28,7 +28,8 @@ viewButton.addEventListener("click", function () {
 
 
 /**
- * Changes mode to input mode (either "dark" or "light")
+ * Changes mode to specified mode passed as a parameter 
+ * (either "dark" or "light")
  * 
  * @param {*} elements - list of elements to update
  * @param {*} theme  - wanted mode

@@ -1,3 +1,10 @@
+/**
+This website does not use any CSS frameworks mainly to showcase my understanding 
+of conceptres like the use of flexboxes and other display properties as well as
+positioning, therefore all the styling was done by me.
+I have purposefully left this file un-minified for easier reading.
+**/
+
 html {
   scroll-behavior: smooth;
   max-width: 100%;
@@ -256,7 +263,7 @@ hr {
 .icon:hover {
   color: #1da1f2;
 }
-
+/*For smaller screens*/
 @media (max-width: 915px) {
   .homepage-container {
     flex-direction: column;
@@ -306,6 +313,7 @@ hr {
   }
 }
 
+/*For even smaller screens like most phones*/
 @media (max-width: 445px) {
   .avatar > img {
     height: 250px;

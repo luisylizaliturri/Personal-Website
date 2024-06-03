@@ -107,26 +107,19 @@ a {
 }
 
 .homepage-container {
-  display: flex;
-  height: 85%;
-  position: relative;
-  justify-content: center;
-  width: 100%;
-  gap: 5vw;
+  text-align: center;
 }
 
 .hello-container {
   flex-basis: 45vw;
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 50px;
-  display: flex;
-  align-items: end;
-  height: 90%;
-  width: 100%;
+  font-size: 60px;
+  margin-top: 10vh;
+  height: 50vh;
 }
 
 .my-name {
-  font-size: 100px;
+  font-size: 120px;
   color: #1da1f2;
 }
 
@@ -152,10 +145,8 @@ a {
 }
 
 #projects {
-  z-index: 2;
   background-color: rgb(0, 0, 0);
   width: 100%;
-  height: 85vh;
   position: relative;
 }
 
@@ -193,33 +184,41 @@ hr {
   flex-wrap: wrap;
   position: relative;
   justify-content: center;
+  flex-direction: column;
+  gap: 15px;
+  margin-bottom: 5%;
 }
+
+.subheading{
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+
 
 .project {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 20px;
+  width: 100%;
 }
 
-.project-img {
+
+.project img {
   height: 400px;
-  width: 400px;
-}
-.project-img img {
-  height: 100%;
-  width: 100%;
-  border-radius: 15%;
+  width: 500px;
+  border-radius: 25px;
   transition: transform 0.3s ease-in-out;
 }
 
-.project-img img:hover {
+.project img:hover {
   transform: scale(95%);
 }
 
 .project > p {
   margin: 10px;
   font-weight: 500;
+  width: 70vw;
+  font-size: 20px;
 }
 
 .coming-soon {
@@ -228,9 +227,9 @@ hr {
   justify-content: center;
   align-items: center;
   font-size: 90px;
-  border-radius: 15%;
-  height: 100%;
-  width: 100%;
+  border-radius: 25px;
+  height: 400px;
+  width: 400px;
 }
 
 #contact {
@@ -265,17 +264,16 @@ hr {
 }
 /*For smaller screens*/
 @media (max-width: 915px) {
-  .homepage-container {
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+  
+  h1 {
+    font-size: 60px;
   }
 
+  .my-name{
+    font-size: 70px
+  }
   .hello-container {
-    flex-direction: column;
     font-size: 30px;
-    margin-top: 20px 30px 0px 30px;
-    text-align: center;
     margin-top: 50px;
     align-items: center;
   }
@@ -283,22 +281,10 @@ hr {
     font-size: 60px;
   }
 
-  .hello-message > p {
-    font-size: 20px;
-    width: 400px;
-  }
-  .avatar > img {
-    height: 300px;
-  }
-
   #projects {
     height: auto;
   }
 
-  .project-img {
-    height: 300px;
-    width: 300px;
-  }
 
   .tab > a {
     font-size: 30px;
@@ -313,9 +299,17 @@ hr {
   }
 }
 
-/*For even smaller screens like most phones*/
-@media (max-width: 445px) {
-  .avatar > img {
-    height: 250px;
+/*For smaller screens*/
+@media (max-width: 540px) {
+  .project img {
+    transform: scale(0.75);
+    border-radius: 25px;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .coming-soon {
+    transform: scale(0.75);
+    transition: transform 0.3s ease-in-out;
   }
 }
+
